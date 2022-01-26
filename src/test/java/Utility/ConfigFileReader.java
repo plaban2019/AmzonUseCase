@@ -40,4 +40,9 @@ public class ConfigFileReader {
         if(amazon_password != null) return amazon_password;
         else throw new RuntimeException("amazon_password not specified in the Configuration.properties file.");
     }
+    public String getSearchedText() {
+        String searchText = properties.getProperty("searchText");
+        if(searchText != null) return searchText;
+        else throw new RuntimeException("searchText not specified in the Configuration.properties file.");
+    }
 }
