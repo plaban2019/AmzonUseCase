@@ -20,6 +20,7 @@ public class AmazonLoginTestCase extends ExtentReport {
     }
     @Test(groups = {"mobileSite"}, description = "SignIn to Amazon.in from Mobile Site", priority = 0)
     public void SignInCheck() throws Exception {
+        configFileReader = new ConfigFileReader();
         System.out.println(driver);
         String text = driver.getCurrentUrl();
         SoftAssert softAssert = new SoftAssert();

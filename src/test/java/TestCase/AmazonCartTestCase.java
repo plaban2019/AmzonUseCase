@@ -21,6 +21,7 @@ public class AmazonCartTestCase extends ExtentReport {
     }
     @Test(groups = {"mobileSite"}, description = "Add To Cart on Amazon.in for Mobile Site", priority = 2)
     public void SignInCheck() throws Exception {
+        configFileReader = new ConfigFileReader();
         String searchText = configFileReader.getSearchedText();
         AmazonCartPageObject amazonAddToCart = new AmazonCartPageObject(driver);
         amazonAddToCart.searchField(searchText);
