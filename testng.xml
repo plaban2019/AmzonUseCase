@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MobileTest">
+<test name="Amazon.in Test" >
+<parameter name="platform" value="Web"/>
+ <groups>
+  <run>
+
+   <include name="mobileSite" />
+
+  </run>
+ </groups>
+<classes>
+<class name="TestCase.AmazonLoginTestCase" />
+<class name="TestCase.AmazonLoginTestCase" />
+<class name="TestCase.AmazonLoginTestCase" />
+</classes>
+
+</test>
+
+ <test name="Android Test">
+  <parameter name="" value="Android" />
+  <groups>
+   <run>
+    <include name="AndroidApp" />
+   </run>
+  </groups>
+  <classes>
+   <class name="TestCase.AmazonLoginTestCase" />
+  </classes>
+ </test>
+
+</suite>
