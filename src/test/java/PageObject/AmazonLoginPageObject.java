@@ -44,7 +44,7 @@ public class AmazonLoginPageObject extends ExtentReport {
     @iOSXCUITFindBy(xpath = "")
     private WebElement passWordField;
 
-    @FindBy(how = How.ID, using = "signInSubmit")
+    @FindBy(how = How.XPATH, using = "//*[@id = 'signInSubmit']")
     @AndroidFindBy(xpath = "")
     @iOSXCUITFindBy(xpath = "")
     private WebElement signInButton;
@@ -121,8 +121,8 @@ public class AmazonLoginPageObject extends ExtentReport {
     }
     public void clickContinueButton() throws Exception {
 
-        if (continueButton.isDisplayed() == true) {
-            Thread.sleep(6000);
+        if (true) {
+            Thread.sleep(2000);
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", continueButton);
             test.log(LogStatus.PASS, "Continue button is clicked");
         }else {
@@ -144,7 +144,7 @@ public class AmazonLoginPageObject extends ExtentReport {
     public void signInToAmazon() throws Exception {
         if(signInButton.isDisplayed()){
             Assert.assertTrue(signInButton.isEnabled());
-            signInButton.click();
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", signInButton);
             test.log(LogStatus.PASS, "Successfully Signed In");
 
 

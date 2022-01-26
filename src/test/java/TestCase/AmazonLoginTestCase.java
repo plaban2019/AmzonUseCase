@@ -3,10 +3,7 @@ import PageObject.AmazonLoginPageObject;
 import Utility.ConfigFileReader;
 import Utility.ExtentReport;
 import Utility.FetchOs;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
 
@@ -36,6 +33,7 @@ public class AmazonLoginTestCase extends ExtentReport {
         amazon.enterPhoneNumber(phoneNumber);
         Thread.sleep(2000);
         amazon.clickContinueButton();
+        Thread.sleep(2000);
         amazon.enterPassWord(passWord);
         Thread.sleep(2000);
         amazon.signInToAmazon();
@@ -47,4 +45,5 @@ public class AmazonLoginTestCase extends ExtentReport {
         System.out.println("Test for Android app");
 
     }
+
 }
